@@ -15,7 +15,7 @@ class Users extends Component {
 
   componentDidMount = () => {
     axios
-      .get('http://localhost:3333/api/users')
+      .get('https://ea-nodeblog.herokuapp.com/api/users')
       .then(res => {
         this.setState({ users: res.data.users });
       })

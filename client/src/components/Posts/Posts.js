@@ -13,7 +13,7 @@ class Posts extends Component {
 
   componentDidMount = () => {
     axios
-      .get('http://localhost:3333/api/posts')
+      .get('https://ea-nodeblog.herokuapp.com/api/posts')
       .then(res => {
         this.setState({ posts: res.data.posts });
       })
