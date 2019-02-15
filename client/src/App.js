@@ -6,7 +6,20 @@ import Posts from './components/Posts/Posts';
 import Users from './components/Users/Users';
 
 class App extends Component {
-  
+  constructor(props) {
+    super(props);
+    this.state = {}
+    this.connecToServer = this.connecToServer.bind(this);
+  }
+
+  connecToServer() {
+    fetch('/');
+  }
+
+  componentDidMount() {
+    this.connecToServer();
+  }
+
   // componentDidMount = () => {
   //   axios
   //     .get('http://localhost:3333/api/posts')
@@ -19,15 +32,11 @@ class App extends Component {
   // };
 
   render() {
-    console.log(this.props);
     return (
       <div className="App">
-        
-        
         <Route exact path='/' component={Users} />
         <Route path='/users/:id' component={User} />
         {/* <Posts /> */}
-        
       </div>
     );
   }

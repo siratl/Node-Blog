@@ -16,7 +16,7 @@ class User extends Component {
   componentDidMount = () => {
     axios
       .get(
-        `http://localhost:3333/api/users/posts/${this.props.match.params.id}`,
+        `https://ea-nodeblog.herokuapp.com/api/users/posts/${this.props.match.params.id}`,
       )
       .then(res => {
         this.setState({
