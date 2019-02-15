@@ -34,7 +34,7 @@ class User extends Component {
     return (
       <div className="userPosts">
         
-        {!this.state.userPosts.length > 0 ? (<div className='loader'><h2>...Loading</h2> <p> User has no content... Try Again.</p></div>
+        {!this.state.userPosts.length > 0 ? (<div className='loader'><h2>...Loading</h2> <p> User has no content... <Link to='/'>Try Again.</Link></p></div>
         ) : (
           <div style={{width: '100%', position: 'relative', paddingTop: "50px"}}>
           <Link
